@@ -16,7 +16,7 @@ public class Moto extends Veiculo {
     }
 
     public void mostrarDados(boolean tipo) {
-        String potencia = tipo ? "Cilindradas: " + cilindradas + "cv"
+        String potencia = tipo ? "Cavalos de Potência: " + cilindradas + "cv"
                 : "Cilindradas: " + cilindradas + "cc";
         System.out.println("Veículo: Moto");
         super.mostrarDados();
