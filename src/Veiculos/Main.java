@@ -65,38 +65,38 @@ public class Main {
                     }
 
                     System.out.println("\n--- Veículos cadastrados ---");
-                    for (Veiculo v : veiculos) {
-                        System.out.println("\n--- " + v.getClass().getSimpleName() + " ---");
+                    for (Veiculo veiculo : veiculos) {
+                        System.out.println("\n--- " + veiculo.getClass().getSimpleName() + " ---");
 
                         System.out.print("Deseja aplicar desconto? (s/n): ");
                         String respDesconto = input.next();
                         if (respDesconto.equalsIgnoreCase("s")) {
                             System.out.print("Digite o percentual de desconto: ");
                             double desconto = input.nextDouble();
-                            v.mostrarDados(desconto);
+                            veiculo.mostrarDados(desconto);
                         } else {
-                            if (v instanceof Carro) {
+                            if (veiculo instanceof Carro) {
                                 System.out.print("Mostrar número de portas? (s/n): ");
                                 String opc = input.next();
-                                ((Carro) v).mostrarDados(opc.equalsIgnoreCase("s"));
-                            } else if (v instanceof Moto) {
+                                ((Carro) veiculo).mostrarDados(opc.equalsIgnoreCase("s"));
+                            } else if (veiculo instanceof Moto) {
                                 System.out.print("Mostrar potência em HP em vez de cilindradas? (s/n): ");
                                 String opc = input.next();
-                                ((Moto) v).mostrarDados(opc.equalsIgnoreCase("s"));
-                            } else if (v instanceof Caminhao) {
+                                ((Moto) veiculo).mostrarDados(opc.equalsIgnoreCase("s"));
+                            } else if (veiculo instanceof Caminhao) {
                                 System.out.print("Mostrar capacidade em Kg em vez de Toneladas? (s/n): ");
                                 String opc = input.next();
-                                ((Caminhao) v).mostrarDados(opc.equalsIgnoreCase("s"));
+                                ((Caminhao) veiculo).mostrarDados(opc.equalsIgnoreCase("s"));
                             } else {
-                                v.mostrarDados();
+                                veiculo.mostrarDados();
                             }
                         }
-                        System.out.println("--------------------------");
+                        System.out.println("+++++++++++++++++++++++++");
                     }
                     break;
 
                 case 0:
-                    System.out.println("\nEncerrando...");
+                    System.out.println("\nEncerrando programa...");
                     break;
 
                 default:
